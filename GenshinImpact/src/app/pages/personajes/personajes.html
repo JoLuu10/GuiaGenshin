@@ -1,0 +1,12 @@
+<h2 class="titulo">Personajes</h2>
+
+<div class="grid">
+  <div class="card" *ngFor="let p of personajes">
+    <div class="card-content">
+      <h3>{{ p.nombre }}</h3>
+      <span class="elemento" [ngClass]="p.elemento.toLowerCase()">
+        {{ p.elemento }}
+      </span>
+    </div>
+  </div>
+</div>
