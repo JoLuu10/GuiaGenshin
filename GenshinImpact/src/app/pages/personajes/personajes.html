@@ -12,7 +12,7 @@
 <div class="panel-filtros">
 
   <!-- ARMAS -->
-  <h4>Filtro de armas</h4>
+  <h2>Arma</h2>
   <div class="filtros">
     <button (click)="toggleFiltro('armas','Mandoble')" [class.activo]="filtro.armas.includes('Mandoble')">Mandoble</button>
     <button (click)="toggleFiltro('armas','Espada')" [class.activo]="filtro.armas.includes('Espada')">Espada</button>
@@ -22,14 +22,14 @@
   </div>
 
   <!-- RAREZA -->
-  <h4>Filtro de rareza</h4>
+  <h2>Rareza</h2>
   <div class="filtros">
     <button (click)="toggleFiltro('rareza',5)" [class.activo]="filtro.rareza.includes(5)">⭐5</button>
     <button (click)="toggleFiltro('rareza',4)" [class.activo]="filtro.rareza.includes(4)">⭐4</button>
   </div>
 
   <!-- ELEMENTOS -->
-  <h4>Filtro de elementos</h4>
+  <h2>Elemento</h2>
   <div class="filtros">
     <button (click)="toggleFiltro('elementos','Hydro')" [class.activo]="filtro.elementos.includes('Hydro')">Hydro</button>
     <button (click)="toggleFiltro('elementos','Geo')" [class.activo]="filtro.elementos.includes('Geo')">Geo</button>

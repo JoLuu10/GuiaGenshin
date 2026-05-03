@@ -1,9 +1,11 @@
 /* Título */
 .titulo {
-  color: #003172;
+  color: #ffffff;
   font-size: 32px;
   margin-bottom: 20px;
   font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Grid */
@@ -11,6 +13,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Card */
@@ -63,11 +67,16 @@
   border-radius: 8px;
   border: none;
   font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  padding: 10px;
 }
 
 .panel-filtros {
   margin-bottom: 20px;
   font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  padding: 10px;
+  color:white;  
 }
 
 .filtros {
@@ -76,6 +85,8 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
   font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  padding: 10px;
 }
 
 button {

@@ -1,10 +1,9 @@
 nav {
   display: flex;
-  align-items: center;
+  text-align: center;
   gap: 30px;
   background: #0f172a;
   padding: 20px;
-  border-radius: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -19,3 +18,4 @@ a {
 a:hover {
   color: #38bdf8;
 }
+

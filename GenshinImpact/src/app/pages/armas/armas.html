@@ -8,7 +8,7 @@
 />
 
 <div class="panel-filtros">
-  <h4>Filtro de tipo</h4>
+  <h2>Tipo</h2>
   <div class="filtros">
     <button (click)="toggleFiltro('tipo','Mandoble')" [class.activo]="filtro.tipo.includes('Mandoble')">Mandoble</button>
     <button (click)="toggleFiltro('tipo','Espada')" [class.activo]="filtro.tipo.includes('Espada')">Espada</button>
@@ -16,7 +16,7 @@
     <button (click)="toggleFiltro('tipo','Lanza')" [class.activo]="filtro.tipo.includes('Lanza')">Lanza</button>
     <button (click)="toggleFiltro('tipo','Catalizador')" [class.activo]="filtro.tipo.includes('Catalizador')">Catalizador</button>
   </div>
-  <h4>Filtro de rareza</h4>
+  <h2>Rareza</h2>
   <div class="filtros">
     <button (click)="toggleFiltro('rareza',5)" [class.activo]="filtro.rareza.includes(5)">⭐5</button>
     <button (click)="toggleFiltro('rareza',4)" [class.activo]="filtro.rareza.includes(4)">⭐4</button>
