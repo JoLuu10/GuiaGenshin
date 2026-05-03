@@ -1,12 +1,13 @@
 body {
-  background: #0f172a;
+  background: #061a49;
 }
 
 /* Título */
 .titulo {
-  color: #e2e8f0;
+  color: #003172;
   font-size: 32px;
   margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Grid */
@@ -25,6 +26,7 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
   cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Hover */
@@ -50,15 +52,15 @@ body {
 
 /* Colores por elemento */
 .pyro {
-  background: #ef4444;
+  background: #ff0000;
 }
 
 .electro {
-  background: #a855f7;
+  background: #600dad;
 }
 
 .anemo {
-  background: #22c55e;
+  background: #00ffd9;
 }
 
 .hydro {
@@ -66,9 +68,10 @@ body {
 }
 
 .cryo {
-  background: #60a5fa;
+  background: #bad9ff;
 }
 
 .geo {
-  background: #f59e0b;
+  background: #ffc800;
 }
+

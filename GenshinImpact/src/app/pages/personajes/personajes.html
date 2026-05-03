@@ -3,10 +3,19 @@
 <div class="grid">
   <div class="card" *ngFor="let p of personajes">
     <div class="card-content">
+      <img src="/characterImg/{{ p.nombre.toLowerCase() }}.jpg" alt="{{ p.nombre }}" class="character-img"> 
       <h3>{{ p.nombre }}</h3>
+      <span class="arma" [ngClass]="p.arma.toLowerCase()">
+          {{ p.arma }}
+        </span>
       <span class="elemento" [ngClass]="p.elemento.toLowerCase()">
         {{ p.elemento }}
       </span>
+
+      <div class="estrellas">
+        <span *ngFor="let star of [].constructor(p.rareza)">⭐</span>
+      </div>
     </div>
+    
   </div>
 </div>

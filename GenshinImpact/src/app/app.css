@@ -4,11 +4,13 @@ nav {
   background: #0f172a;
   padding: 20px;
   border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 a {
   color: #e2e8f0;
   text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: 18px;
 }
