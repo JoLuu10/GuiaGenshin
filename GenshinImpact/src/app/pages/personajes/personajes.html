@@ -1,13 +1,62 @@
 <h2 class="titulo">Personajes</h2>
 
+<!-- 🔎 BUSCADOR -->
+<input 
+  type="text" 
+  placeholder="Buscar personajes..." 
+  [(ngModel)]="filtro.busqueda"
+  class="buscador"
+/>
+
+<!-- FILTROS -->
+<div class="panel-filtros">
+
+  <!-- ARMAS -->
+  <h4>Filtro de armas</h4>
+  <div class="filtros">
+    <button (click)="toggleFiltro('armas','Mandoble')" [class.activo]="filtro.armas.includes('Mandoble')">Mandoble</button>
+    <button (click)="toggleFiltro('armas','Espada')" [class.activo]="filtro.armas.includes('Espada')">Espada</button>
+    <button (click)="toggleFiltro('armas','Arco')" [class.activo]="filtro.armas.includes('Arco')">Arco</button>
+    <button (click)="toggleFiltro('armas','Lanza')" [class.activo]="filtro.armas.includes('Lanza')">Lanza</button>
+    <button (click)="toggleFiltro('armas','Catalizador')" [class.activo]="filtro.armas.includes('Catalizador')">Catalizador</button>
+  </div>
+
+  <!-- RAREZA -->
+  <h4>Filtro de rareza</h4>
+  <div class="filtros">
+    <button (click)="toggleFiltro('rareza',5)" [class.activo]="filtro.rareza.includes(5)">⭐5</button>
+    <button (click)="toggleFiltro('rareza',4)" [class.activo]="filtro.rareza.includes(4)">⭐4</button>
+  </div>
+
+  <!-- ELEMENTOS -->
+  <h4>Filtro de elementos</h4>
+  <div class="filtros">
+    <button (click)="toggleFiltro('elementos','Hydro')" [class.activo]="filtro.elementos.includes('Hydro')">Hydro</button>
+    <button (click)="toggleFiltro('elementos','Geo')" [class.activo]="filtro.elementos.includes('Geo')">Geo</button>
+    <button (click)="toggleFiltro('elementos','Dendro')" [class.activo]="filtro.elementos.includes('Dendro')">Dendro</button>
+    <button (click)="toggleFiltro('elementos','Cryo')" [class.activo]="filtro.elementos.includes('Cryo')">Cryo</button>
+    <button (click)="toggleFiltro('elementos','Pyro')" [class.activo]="filtro.elementos.includes('Pyro')">Pyro</button>
+    <button (click)="toggleFiltro('elementos','Electro')" [class.activo]="filtro.elementos.includes('Electro')">Electro</button>
+    <button (click)="toggleFiltro('elementos','Anemo')" [class.activo]="filtro.elementos.includes('Anemo')">Anemo</button>
+  </div>
+
+</div>
+
+<!-- GRID -->
 <div class="grid">
-  <div class="card" *ngFor="let p of personajes">
+  <div class="card" *ngFor="let p of personajesFiltrados">
     <div class="card-content">
-      <img src="/characterImg/{{ p.nombre.toLowerCase() }}.jpg" alt="{{ p.nombre }}" class="character-img"> 
+      
+      <img src="/characterImg/{{ p.nombre.toLowerCase() }}.jpg" 
+           alt="{{ p.nombre }}" 
+           class="character-img"> 
+
       <h3>{{ p.nombre }}</h3>
+
       <span class="arma" [ngClass]="p.arma.toLowerCase()">
-          {{ p.arma }}
-        </span>
+        {{ p.arma }}
+      </span>
+
       <span class="elemento" [ngClass]="p.elemento.toLowerCase()">
         {{ p.elemento }}
       </span>
@@ -15,7 +64,7 @@
       <div class="estrellas">
         <span *ngFor="let star of [].constructor(p.rareza)">⭐</span>
       </div>
+
     </div>
-    
   </div>
 </div>

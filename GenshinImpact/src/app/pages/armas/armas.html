@@ -1,9 +1,37 @@
 <h2 class="titulo">Armas</h2>
 
+<input 
+  type="text" 
+  placeholder="Buscar armas..." 
+  [(ngModel)]="filtro.busqueda"
+  class="buscador"
+/>
+
+<div class="panel-filtros">
+  <h4>Filtro de tipo</h4>
+  <div class="filtros">
+    <button (click)="toggleFiltro('tipo','Mandoble')" [class.activo]="filtro.tipo.includes('Mandoble')">Mandoble</button>
+    <button (click)="toggleFiltro('tipo','Espada')" [class.activo]="filtro.tipo.includes('Espada')">Espada</button>
+    <button (click)="toggleFiltro('tipo','Arco')" [class.activo]="filtro.tipo.includes('Arco')">Arco</button> 
+    <button (click)="toggleFiltro('tipo','Lanza')" [class.activo]="filtro.tipo.includes('Lanza')">Lanza</button>
+    <button (click)="toggleFiltro('tipo','Catalizador')" [class.activo]="filtro.tipo.includes('Catalizador')">Catalizador</button>
+  </div>
+  <h4>Filtro de rareza</h4>
+  <div class="filtros">
+    <button (click)="toggleFiltro('rareza',5)" [class.activo]="filtro.rareza.includes(5)">⭐5</button>
+    <button (click)="toggleFiltro('rareza',4)" [class.activo]="filtro.rareza.includes(4)">⭐4</button>
+    <button (click)="toggleFiltro('rareza',3)" [class.activo]="filtro.rareza.includes(3)">⭐3</button>
+  </div>
+</div>
 <div class="grid">
-  <div class="card" *ngFor="let a of armas">
+  <div class="card" *ngFor="let a of armasFiltradas">
     <div class="card-content">
+      <img src="/weaponImg/{{ a.nombre.toLowerCase().replace(/ /g,'-') }}.jpg" 
+           alt="{{ a.nombre }}" 
+           class="weapon-img">
+
       <h3>{{ a.nombre }}</h3>
+
       <p>{{ a.tipo }}</p>
 
       <div class="estrellas">

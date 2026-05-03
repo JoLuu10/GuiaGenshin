@@ -1,31 +1,33 @@
 /* Título */
 .titulo {
-  color: #e2e8f0;
+  color: #003172;
   font-size: 32px;
   margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Card */
 .card {
   background: linear-gradient(145deg, #1e293b, #0f172a);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 20px;
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
   cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Hover */
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-5px) scale(1);
 }
 
 /* Contenido */
@@ -52,4 +54,41 @@
 
 .card:has(.estrellas span:nth-child(3)) {
   border: 2px solid #60a5fa;
+}
+
+.buscador {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.panel-filtros {
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #2a3b5f;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button.activo {
+  background: #4da6ff;
+  font-family: 'Courier New', Courier, monospace;
 }

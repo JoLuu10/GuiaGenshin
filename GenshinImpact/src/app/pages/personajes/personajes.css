@@ -14,16 +14,16 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Card */
 .card {
   background: linear-gradient(145deg, #1e293b, #0f172a);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 20px;
   color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(231, 155, 3, 0.5);
   transition: all 0.3s ease;
   cursor: pointer;
   font-family: 'Courier New', Courier, monospace;
@@ -31,15 +31,14 @@ body {
 
 /* Hover */
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+  transform: translateY(-5px) scale(1);
 }
 
 /* Contenido */
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 /* Elemento badge */
@@ -53,25 +52,66 @@ body {
 /* Colores por elemento */
 .pyro {
   background: #ff0000;
+  color: white;
 }
 
 .electro {
   background: #600dad;
+  color: white;
 }
 
 .anemo {
   background: #00ffd9;
+  color: black
 }
 
 .hydro {
   background: #3b82f6;
+  color: white;
 }
 
 .cryo {
   background: #bad9ff;
+  color: black;
 }
 
 .geo {
   background: #ffc800;
 }
 
+.buscador {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.panel-filtros {
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #2a3b5f;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button.activo {
+  background: #4da6ff;
+  font-family: 'Courier New', Courier, monospace;
+}
